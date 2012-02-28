@@ -17,6 +17,7 @@ DROP TABLE IF EXISTS  `transactions`;
      `amount`  INT(5) NOT NULL,
      `flow`  VARCHAR(10) NOT NULL,
      `dateSubmitted`  DATE NOT NULL,
+	'because' VARCHAR(20) NOT NULL,
     PRIMARY KEY (`id`)
 );
 

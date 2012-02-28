@@ -26,7 +26,8 @@ include 'dbconnect.php';
 			$date = $row['dateSubmitted'];
 			$ford = $row['because'];
 			
-			echo "<tr><td>$name></td><td>$title</td><td>$ford</td><td>$amount</td><td>$flow</td><td>$date</td></tr>\n";
+			echo "<tr><td>$name</td><td>$title</td><td>$ford</td><td>$amount</td><td>$flow</td><td>$date</td></tr>\n";
+		}
 	?>
 	</table>
 </div>
