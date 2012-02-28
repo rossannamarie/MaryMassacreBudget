@@ -8,15 +8,16 @@ USE budget;
 -- Table structure for table `transactions`  
 --
 
+
 DROP TABLE IF EXISTS  `transactions`;
  CREATE TABLE  `transactions`  (
-	 `id`  INT(100) NOT NULL AUTO_INCREMENT,
-	 `name`  VARCHAR(20) NOT NULL,
-	 `title`  VARCHAR(40) NOT NULL,
-	 `amount`  INT(5) NOT NULL,
-	 `flow`  VARCHAR(10) NOT NULL,
-	 `dateSubmitted`  DATE NOT NULL,
-	PRIMARY KEY (`id`)
+     `id`  INT(100) NOT NULL AUTO_INCREMENT,
+     `name`  VARCHAR(20) NOT NULL,
+     `title`  VARCHAR(40) NOT NULL,
+     `amount`  INT(5) NOT NULL,
+     `flow`  VARCHAR(10) NOT NULL,
+     `dateSubmitted`  DATE NOT NULL,
+    PRIMARY KEY (`id`)
 );
 
 --
