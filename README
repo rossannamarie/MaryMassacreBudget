@@ -1,0 +1,14 @@
+To access the site:
+Create a folder called MaryMassacreBudget in your htdocs
+Git clone to your desktop using this command, git clone git@github.com:rossannamarie/MaryMassacreBudget.git
+Move the Desktop MaryMassacreBudget into your htdocs folder by dragging and dropping
+Point your brower to http://localhost:8538/MaryMassacreBudget/login.php
+
+To explore the site:
+Click on the login button (no need for a user name and password yet)
+Go to the Add Transactions page by clicking on the banner at the top
+Fill out the form 
+Click Submit
+Click Confirm
+View your transaction
+You may also launch mysql and view the transactions table to confirm that the transaction was added to the database
