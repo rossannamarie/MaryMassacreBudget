@@ -1,4 +1,5 @@
 <HTML>
+<title>Mary Massacre Budget</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
 <div id="banner">
 <div id="title"> Mary Massacre Budget</div>
