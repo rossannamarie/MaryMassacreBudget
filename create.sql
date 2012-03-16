@@ -54,7 +54,7 @@ INSERT INTO  `users`  VALUES(2, 'Devon', 'MARYMASSACREBUDGET12', 'Captain', 'lin
 -- Table structure for table `userLogs`
 --
 
-DROP TABLE IF EXISTS `userLogs`
+DROP TABLE IF EXISTS `userLogs`;
 CREATE TABLE `userLogs` (
 	`id` INT(100) NOT NULL AUTO_INCREMENT,
 	`name` VARCHAR(20) NOT NULL,
