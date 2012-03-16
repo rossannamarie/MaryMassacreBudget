@@ -1,6 +1,6 @@
 DROP  DATABASE IF EXISTS budget;
 CREATE DATABASE IF NOT EXISTS budget;
-GRANT ALL PRIVILEGES ON budget.* to 'assist'@'localhost' identified by 'assist';
+GRANT ALL PRIVILEGES ON budget.* to 'budgetuser'@'localhost' identified by 'budgetuser';
 USE budget;
 
 
