@@ -12,10 +12,9 @@ session_start();
 	include 'dbconnect.php';
 ?>
 <?php
-	echo "Hello";
-	$query = "SELECT DISTINCT users.name, dateSubmitted, link, position, picture FROM userLogs INNER JOIN users ON name=name";
-	$result = mysqli_query($db, $query) or die ("Error Querying Database");
-	while ($row = mysqli_fetch_array($result)) 
+	$query = "SELECT DISTINCT users.name, userLogs.dateSubmitted, userLogs.link, users.position, users.picture FROM userLogs INNER JOIN users WHERE users.name = userLogs.name";
+	$resultOne = mysqli_query($db, $query) or die ("Error Querying Database");
+	while ($row = mysqli_fetch_array($resultOne)) 
 	{
 		$name = $row['name'];
 		$date = $row['dateSubmitted'];
@@ -28,17 +27,20 @@ session_start();
 		echo "<center>$position</center>";
 		echo "</td>";
 		$query ="SELECT users.name, dateSubmitted, link FROM userLogs INNER JOIN users";
-		result = mysqli_query($db, $query) or die ("Error Querying Database");
+		$result = mysqli_query($db, $query) or die ("Error Querying Database");
 		while ($row = mysqli_fetch_array($result)) 
 		{
-			$name = $row['name'];
+			$tname = $row['name'];
+			if($name == $tname) {
+			echo "<td>";
 			$date = $row['dateSubmitted'];
 			$link = $row['link'];
-			echo "<td>";
 			echo "<p>";
 			echo "<b>$name</b> posted a transaction on <i>$date</i>.</br><font size=2><u>$link</u></font></br>";
 			echo "</td>";
+			}
 		}
+			echo "<tr></tr>";
 	}
 ?>
 
