@@ -62,13 +62,3 @@ CREATE TABLE `userLogs` (
 	`link` VARCHAR(30) NOT NULL,
 	PRIMARY KEY(`id`)
 );
-
---
--- Dumping data for table `userLogs`
---
-
-INSERT INTO `userLogs` VALUES(1, 'MaryBeth', '2/12/2012', 'link');
-INSERT INTO `userLogs` VALUES(2, 'Devon', '2/12/2012', 'link');
-
-
-
