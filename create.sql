@@ -26,7 +26,7 @@ DROP TABLE IF EXISTS  `transactions`;
 -- Dumping data for table `transactions` 
 --
 
-INSERT INTO  `transactions`  VALUES(1, 'Example', 'Cupid\'s Revenge Bid', 300, 'Paid', '2/15/2012');
+INSERT INTO  `transactions`  VALUES(1, 'Example', 'Cupid\'s Revenge Bid', 300, 'Paid', '2/15/2012', 'Gas');
 
 --
 -- Table structure for table `users`  
@@ -46,9 +46,9 @@ CREATE TABLE `users` (
 -- Dumping data for table `users` 
 --
 
-INSERT INTO  `users`  VALUES(1, 'MaryBeth', 'MARYMASSACREBUDGET12', 'Captain', 'link');
-INSERT INTO  `users`  VALUES(2, 'Devon', 'MARYMASSACREBUDGET12', 'Captain', 'link');
-INSERT INTO  `users`  VALUES(3, 'test', 'test', 'test', 'link');
+INSERT INTO  `users`  VALUES(1, 'MaryBeth', 'MARYMASSACREBUDGET12', 'Captain', 'MaryBeth.jpg');
+INSERT INTO  `users`  VALUES(2, 'Devon', 'MARYMASSACREBUDGET12', 'Captain', 'Devon.jpg');
+INSERT INTO  `users`  VALUES(3, 'test', 'test', 'test', 'test.jpg');
 
 -- 
 -- Table structure for table `userLogs`
