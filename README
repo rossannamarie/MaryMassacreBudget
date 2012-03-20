@@ -6,11 +6,11 @@ Source the create.sql file using MySQL on your computer
 Point your brower to http://localhost:8538/MaryMassacreBudget/login.php
 
 To explore the site:
-Click on the login button
 Login using the username and password "test"
 Go to the Add Transactions page by clicking on the banner at the top
-Fill out the form *use "test" in the Name of Transactor textbox*
+Fill out the form (use "test" in the Name of Transactor textbox)
 Click Submit
 Click Confirm
 View your transaction
 You may also launch mysql and view the transactions table to confirm that the transaction was added to the database
+Transactions can also be viewed on the profile page
