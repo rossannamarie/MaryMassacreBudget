@@ -38,6 +38,11 @@ session_start();
 			echo "<input type=\"submit\" value=\"Login\" name=\"submit\" /></form> <p><a href=\"register.php\">Register</a></p>";
 		}
 	}
+	else if (isset($_SESSION['username']))
+	{
+		echo "<p>You're logged in!</p>";
+		echo "<p><a href=\"viewAll.php\">View All</a></p>";
+	}
 ?>
 			
 <!--<div id="login">
