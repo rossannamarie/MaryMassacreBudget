@@ -16,7 +16,7 @@ include 'template.php';
 <input type="radio" name="comp" value="Reimbursement" />Reimbursement
 <input type="radio" name="comp" value="Paid out" />Paid out
 <p> Date : <input type="text" name="date" /></p>
-	e.g. 1/12/12
+	<i><font size=2>ex. YYYY-MM-DD</font></i>
 <br/>
 <br/>
 <input type="submit" value="Submit Application" class="submitButton" />
