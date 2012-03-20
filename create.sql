@@ -48,7 +48,7 @@ CREATE TABLE `users` (
 
 INSERT INTO  `users`  VALUES(1, 'MaryBeth', 'MARYMASSACREBUDGET12', 'Captain', 'link');
 INSERT INTO  `users`  VALUES(2, 'Devon', 'MARYMASSACREBUDGET12', 'Captain', 'link');
-
+INSERT INTO  `users`  VALUES(3, 'test', 'test', 'test', 'link');
 
 -- 
 -- Table structure for table `userLogs`
