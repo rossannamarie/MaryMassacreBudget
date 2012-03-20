@@ -32,7 +32,7 @@ session_start();
 		else		
 		{
 			//echo "<p>Incorrect username or password</p>\n";
-			echo "<h1>Login</h1>\n <form method=\"post\" action=\"login.php\">";
+			echo "<h1>Login</h1>\n <form method=\"post\" action=\"postlogin.php\">";
 			echo "<label for=\"username\">Username : </label><input typ=\"text\" id=\"username\" name=\"username\" /><br/>";
 			echo "<label for=\"password\">Password : </label><input type=\"password\" id =\"password\" name=\"password\" /><br/>";
 			echo "<input type=\"submit\" value=\"Login\" name=\"submit\" /></form> <p><a href=\"register.php\">Register</a></p>";
