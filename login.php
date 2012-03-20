@@ -9,7 +9,7 @@ session_start();
 </div>
 
 <?php
-	include "db_connect.php";
+	include "dbconnect.php";
 	if (!isset($_SESSION['username']))
 	{
 		$name = $_POST['username'];
@@ -31,7 +31,7 @@ session_start();
 			echo "<input type=\"submit\" value=\"Login\" name=\"submit\" /></form> <p><a href=\"register.php\">Register</a></p>";
 		}
 	}
-	if (isset($_SESSION['user_id']))
+	else
 	{
 		echo "<p>You're logged in!</p>";
 		echo "<p><a href=\"viewAll.php\">View All</a></p>";
