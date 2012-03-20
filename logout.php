@@ -1,4 +1,5 @@
 <?php
+	$_SESSION['username'] = "loggedout";
 	session_destroy();
 ?>
 
