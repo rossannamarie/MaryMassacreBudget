@@ -8,14 +8,14 @@ session_start();
 <div id="title"> Mary Massacre Budget</div>
 </div>
 
-<META HTTP-EQUIV="refresh" content="0;URL=login.php">
 
 <?php
 	include "dbconnect.php";
 	if (isset($_SESSION['username']))
 	{
-		echo "<p>You're logged in!</p>";
-		echo "<p><a href=\"viewAll.php\">View All</a></p>";
+	?>
+		<META HTTP-EQUIV="refresh" content="0;URL=postlogin.php">
+	<?php
 	}	
 	else if (!isset($_SESSION['username']))
 	{
