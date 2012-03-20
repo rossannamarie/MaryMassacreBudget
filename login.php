@@ -10,7 +10,12 @@ session_start();
 
 <?php
 	include "dbconnect.php";
-	if (!isset($_SESSION['username']))
+	if (isset($_SESSION['username']))
+	{
+		echo "<p>You're logged in!</p>";
+		echo "<p><a href=\"viewAll.php\">View All</a></p>";
+	}	
+	else if (!isset($_SESSION['username']))
 	{
 		$name = $_POST['username'];
 		$pw = $_POST['password'];
@@ -30,11 +35,6 @@ session_start();
 			echo "<label for=\"password\">Password : </label><input type=\"password\" id =\"password\" name=\"password\" /><br/>";
 			echo "<input type=\"submit\" value=\"Login\" name=\"submit\" /></form> <p><a href=\"register.php\">Register</a></p>";
 		}
-	}
-	else
-	{
-		echo "<p>You're logged in!</p>";
-		echo "<p><a href=\"viewAll.php\">View All</a></p>";
 	}
 ?>
 			
