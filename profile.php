@@ -8,7 +8,6 @@ session_start();
 <?php
 	include 'template.php';
 	include 'dbconnect.php';
-	echo "Hello";
 ?>
 <?php
 	$query = "SELECT DISTINCT users.name, users.position, users.picture FROM users";
@@ -27,15 +26,15 @@ session_start();
 		$result = mysqli_query($db, $query) or die ("Error Querying Database");
 		while ($row = mysqli_fetch_array($result)) 
 		{
-			echo "<form method=get action=viewTransaction.php>";
+			//echo "<form method=get action=viewTransaction.php>";
 			$tname = $row['name'];
-			//if($name == $tname) {
+			if($name == $tname) {
 			$date = $row['dateSubmitted'];
 			$link = $row['id'];
 			echo "<p><b>$name</b> posted a transaction on <i>$date</i></p>";
-			echo "<input type=\"submit\" value=\"View transaction\" id = ".$link." />";
-			echo "</form>";
-			//}
+			//echo "<input type=\"submit\" value=\"View transaction\" id = ".$link." />";
+			//echo "</form>";
+			}
 		}
 	}
 ?>
