@@ -10,6 +10,13 @@ session_start();
 	include 'dbconnect.php';
 ?>
 <?php
+	$query = "SELECT name, position FROM users WHERE name =(SELECT name FROM userLogs GROUP BY name ORDER BY COUNT(*) DESC LIMIT 1)";  
+	$top = mysqli_query($db, $query) or die ("Error Querying Database");
+	while ($row = mysqli_fetch_array($top)){
+		$topname = $row['name'];
+		$topposition = $row['position'];
+		echo "<p><b>".$topposition." ".$topname." has logged the most transactions</b></p>";
+	}
 	$query = "SELECT DISTINCT users.name, users.position, users.picture FROM users";
 	$resultOne = mysqli_query($db, $query) or die ("Error Querying Database");
 	while ($row = mysqli_fetch_array($resultOne)) 
@@ -23,6 +30,7 @@ session_start();
 		echo "<center><img src=".$picture." width=100 height=auto></center></br>";
 		echo "<center>$position</center>";
 		$query ="SELECT users.name, userLogs.id, dateSubmitted, link FROM userLogs INNER JOIN users ON users.name = userLogs.name";
+		//$query = "SELECT id, dateSubmitted, link FROM userLogs WHERE name = (SELECT name FROM users);"  
 		$result = mysqli_query($db, $query) or die ("Error Querying Database");
 		while ($row = mysqli_fetch_array($result)) 
 		{
