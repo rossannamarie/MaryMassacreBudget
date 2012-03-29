@@ -62,3 +62,5 @@ CREATE TABLE `userLogs` (
 	`link` VARCHAR(30) NOT NULL,
 	PRIMARY KEY(`id`)
 );
+
+CREATE INDEX `nameIndex` ON `userLogs` (`name`);
