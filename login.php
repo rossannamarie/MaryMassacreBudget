@@ -1,4 +1,4 @@
-?php
+<?php
 session_start();
 ?>
 <HTML>
@@ -19,8 +19,8 @@ session_start();
 	}	
 	else if (!isset($_SESSION['username']))
 	{
-		$name = $_POST['username'];
-		$pw = $_POST['password'];
+		$name = mysqli_real_escape_string($db, trim($_POST['username']));
+		$pw = mysqli_real_escape_string($db, trim($_POST['password']));
 
 		$query = "select * from users WHERE name = '$name' AND password = '$pw'";
 		$result = mysqli_query($db, $query);

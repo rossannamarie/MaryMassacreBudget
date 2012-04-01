@@ -34,21 +34,20 @@ INSERT INTO  `transactions`  VALUES(1, 'Example', 'Cupid\'s Revenge Bid', 300, '
 
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
-	 `id` INT(100) NOT NULL AUTO_INCREMENT,
 	 `name`  VARCHAR(20) NOT NULL,
 	 `password`  VARCHAR(40) NOT NULL,
 	 `position` VARCHAR(10) NOT NULL,
 	 `picture` VARCHAR(30) NOT NULL,
-	PRIMARY KEY (`id`)
+	PRIMARY KEY (`name`)
 );
 
 --
 -- Dumping data for table `users` 
 --
 
-INSERT INTO  `users`  VALUES(1, 'MaryBeth', 'MARYMASSACREBUDGET12', 'Captain', 'MaryBeth.jpg');
-INSERT INTO  `users`  VALUES(2, 'Devon', 'MARYMASSACREBUDGET12', 'Captain', 'Devon.jpg');
-INSERT INTO  `users`  VALUES(3, 'test', 'test', 'test', 'test.jpg');
+INSERT INTO  `users`  VALUES('MaryBeth', 'MARYMASSACREBUDGET12', 'Captain', 'MaryBeth.jpg');
+INSERT INTO  `users`  VALUES('Devon', 'MARYMASSACREBUDGET12', 'Captain', 'Devon.jpg');
+INSERT INTO  `users`  VALUES('test', 'test', 'test', 'test.jpg');
 
 -- 
 -- Table structure for table `userLogs`
