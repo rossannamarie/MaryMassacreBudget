@@ -19,7 +19,7 @@ include 'template.php';
 	<i><font size=2>ex. YYYY-MM-DD</font></i>
 <br/>
 <br/>
-<input type="submit" value="Submit Application" class="submitButton" />
+<input type="submit" value="Submit Transaction" class="submitButton" />
 </form>
 </div>
 </HTML>
