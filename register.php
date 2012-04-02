@@ -11,7 +11,7 @@
 <tr><td align = "right">
 Name:</td><td><input type="text" name="name" /></td>
 <tr><td align = "right">
-Password:</td><td><input type="text" name="password" /></td>
+Password:</td><td><input type="password" name="password" /></td>
 <tr><td align = "right">
 Position:</td><td><input type="text" name="position" /></td>
 </tr><tr><td></td><td>

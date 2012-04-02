@@ -22,7 +22,7 @@ DROP TABLE IF EXISTS  `transactions`;
 -- Dumping data for table `transactions` 
 --
 
-INSERT INTO  `transactions`  VALUES(1, 'Example', 'Cupid\'s Revenge Bid', 300, 'Paid', '2012-02-15', 'Gas');
+INSERT INTO  `transactions`  VALUES('Example', 'Cupid\'s Revenge Bid', 300, 'Paid', '2012-02-15', 'Gas');
 
 --
 -- Table structure for table `users`  

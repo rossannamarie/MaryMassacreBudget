@@ -19,8 +19,10 @@ session_start();
 	}	
 	else if (!isset($_SESSION['username']))
 	{
-		$name = mysqli_real_escape_string($db, trim($_POST['username']));
-		$pw = mysqli_real_escape_string($db, trim($_POST['password']));
+		$name = mysqli_real_escape_string(trim($_POST['username']));
+		$pw = mysqli_real_escape_string(trim($_POST['password']));
+		$name = mysqli_real_escape_string(strip_tags($_POST['username']));
+		$pw = mysqli_real_escape_string(strip_tags($_POST['password']));
 
 		$query = "select * from users WHERE name = '$name' AND password = '$pw'";
 		$result = mysqli_query($db, $query);

@@ -5,7 +5,8 @@ include 'template.php';
 $directory_self = str_replace(basename($_SERVER['PHP_SELF']), '', $_SERVER['PHP_SELF']); 
 
 // make a note of the location of the upload handler script 
-$uploadHandler = 'http://localhost:8538/MaryMassacreBudget/uploadPicture.php' . $_SERVER['HTTP_HOST'] . $directory_self . 'uploadPicture.php'; 
+//$uploadHandler = $_SERVER['HTTP_HOST'] . $directory_self . 'uploadPicture.php'; 
+$uploadHandler = $directory_self . 'uploadPicture.php';
 
 // set a max file size for the html upload form 
 $max_file_size = 30000; // size in bytes 

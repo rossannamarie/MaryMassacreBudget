@@ -14,16 +14,18 @@ include 'dbconnect.php';
 <div id="regView">
 <?php
 	if (isset($_GET['name'])){
-		$name=$_GET['name'];
-		$name= mysqli_real_escape_string($db, trim($name));
+		$name= mysqli_real_escape_string(trim($_GET['name']));
+		$name = mysqli_real_escape_string(strip_tags($name));
 		$_SESSION['name'] = $name;
 	}
 	if (isset($_GET['password'])){
-		$password= mysqli_real_escape_string($db, trim($_GET['password']));
+		$password= mysqli_real_escape_string(trim($_GET['password']));
+		$password = mysqli_real_escape_string(strip_tags($password));
 		$_SESSION['password'] = $password;
 	}
 	if (isset($_GET['position'])){
-		$position= mysqli_real_escape_string($db, trim($_GET['position']));
+		$position= mysqli_real_escape_string(trim($_GET['position']));
+		$position = mysqli_real_escape_string(strip_tags($position));
 		$_SESSION['position'] = $position;
 	}
 	
