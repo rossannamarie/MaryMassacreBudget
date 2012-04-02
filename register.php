@@ -13,8 +13,6 @@ Name:</td><td><input type="text" name="name" /></td>
 <tr><td align = "right">
 Password:</td><td><input type="text" name="password" /></td>
 <tr><td align = "right">
-Retype Password:</td><td><input type="text" name="repass" /></td>
-<tr><td align = "right">
 Position:</td><td><input type="text" name="position" /></td>
 </tr><tr><td></td><td>
 <input type="submit" value="Register" class="submitButton" />

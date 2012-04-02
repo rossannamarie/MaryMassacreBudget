@@ -1,5 +1,6 @@
 <?php
 session_start();
+include 'dbconnect.php';
 ?>
 
 <HTML>
@@ -13,15 +14,16 @@ session_start();
 <div id="regView">
 <?php
 	if (isset($_GET['name'])){
-		$name= mysqli_real_escape_string($db, trim($_GET['name']));
+		$name=$_GET['name'];
+		$name= mysqli_real_escape_string($db, trim($name));
 		$_SESSION['name'] = $name;
 	}
-	if (isset($_GET['password']) && (($_GET['password']) == ($_GET['repass']))){
+	if (isset($_GET['password'])){
 		$password= mysqli_real_escape_string($db, trim($_GET['password']));
 		$_SESSION['password'] = $password;
 	}
 	if (isset($_GET['position'])){
-		$title= mysqli_real_escape_string($db, trim($_GET['position']));
+		$position= mysqli_real_escape_string($db, trim($_GET['position']));
 		$_SESSION['position'] = $position;
 	}
 	
