@@ -16,7 +16,6 @@ include "dbconnect.php";
 $name=$_GET['name'];
 	if (isset($_GET['name'])){
 		$name=trim($_GET['name']); 
-		echo "NAME ". $name;
 		$name =mysqli_real_escape_string($db, $name);
 		$name = mysqli_real_escape_string($db, strip_tags($name));
 		$_SESSION['name'] = $name;

@@ -35,10 +35,10 @@ session_start();
 		{
 			//echo "<p>Incorrect username or password</p>\n";
 			echo "<h1>Login</h1>\n <form method=\"post\" action=\"postlogin.php\">";
-			echo "<table border = 0><tr><td align = \"right\"><label for=\"username\">Username:</td><td></label><input typ=\"text\" id=\"username\" name=\"username\" /></td></tr><tr><td align = \"right\">";
+			echo "<div id = \"form\"><table border = 0><tr><td align = \"right\"><label for=\"username\">Username:</td><td></label><input typ=\"text\" id=\"username\" name=\"username\" /></td></tr><tr><td align = \"right\">";
 			echo "<label for=\"password\">Password:</td><td></label><input type=\"password\" id =\"password\" name=\"password\" /></td></tr><tr><td></td><td>";
 			echo "<input type=\"submit\" value=\"Login\" name=\"submit\" /></td></form>";
-			echo "</tr><tr><td></td><td><a href=\"register.php\">Register</a></td></tr></table>";
+			echo "</tr><tr><td></td><td><a href=\"register.php\">Register</a></td></tr></table></form>";
 		}
 	}
 	else if (isset($_SESSION['username']))
