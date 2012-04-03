@@ -11,7 +11,7 @@ include 'template.php';
 <input type="radio" name="ford" value="Hotel" />Hotel
 <input type="radio" name="ford" value="Other" />Other
 <p> Title : <input type="text" name="title" /></p>
-	e.g. Cupid's Revenge Bid <p></p>
+	e.g. Cupid Revenge Bid <p></p>
 <p> Amount : <input type="text" name="amount" /></p>
 <input type="radio" name="comp" value="Reimbursement" />Reimbursement
 <input type="radio" name="comp" value="Paid out" />Paid out

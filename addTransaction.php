@@ -1,6 +1,6 @@
 <?php
 session_start();
-`include 'dbconnect.php';
+include 'dbconnect.php';
 $name = $_SESSION[name];
 $title =$_SESSION[title]; 
 $amount = $_SESSION[amount];
