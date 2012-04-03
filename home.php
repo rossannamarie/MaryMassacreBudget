@@ -6,7 +6,7 @@
 </div>
 
 <p>
-<center><img src="default.jpg">
+<center><img src="teamPic.jpg">
 <p>
 <font face = "Century Gothic" size="5"><a href="register.php">Register</a> | <a href="login.php">Login</a></font></center>
 
