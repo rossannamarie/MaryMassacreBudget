@@ -1,5 +1,6 @@
 <?php
 session_start();
+include "dbconnect.php";
 ?>
 <HTML>
 <link rel="stylesheet" type="text/css" href="style.css" />
@@ -7,8 +8,8 @@ session_start();
 <?php
 include 'template.php';
 	if (isset($_GET['name'])){
-		$name= mysqli_real_escape_string(trim($_GET['name']));
-		$name = mysqli_real_escape_string(strip_tags($name));
+		$name= mysqli_real_escape_string($db, trim($_GET['name']));
+		$name = mysqli_real_escape_string($db, strip_tags($name));
 		$_SESSION['name'] = $name;
 	}
 	if (isset($_GET['ford'])){

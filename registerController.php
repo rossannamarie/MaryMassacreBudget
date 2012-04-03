@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'dbconnect.php';
+include "dbconnect.php";
 ?>
 
 <HTML>
@@ -13,19 +13,23 @@ include 'dbconnect.php';
 <link rel="stylesheet" type="text/css" href="style.css" />
 <div id="regView">
 <?php
+$name=$_GET['name'];
+echo "Values from GET ".$_GET['name'].$name." ";
 	if (isset($_GET['name'])){
-		$name= mysqli_real_escape_string(trim($_GET['name']));
-		$name = mysqli_real_escape_string(strip_tags($name));
+		$name=trim($_GET['name']); 
+		echo "NAME ". $name;
+		$name =mysqli_real_escape_string($db, $name);
+		$name = mysqli_real_escape_string($db, strip_tags($name));
 		$_SESSION['name'] = $name;
 	}
 	if (isset($_GET['password'])){
-		$password= mysqli_real_escape_string(trim($_GET['password']));
-		$password = mysqli_real_escape_string(strip_tags($password));
+		$password= mysqli_real_escape_string($db, trim($_GET['password']));
+		$password = mysqli_real_escape_string($db, strip_tags($password));
 		$_SESSION['password'] = $password;
 	}
 	if (isset($_GET['position'])){
-		$position= mysqli_real_escape_string(trim($_GET['position']));
-		$position = mysqli_real_escape_string(strip_tags($position));
+		$position= mysqli_real_escape_string($db, trim($_GET['position']));
+		$position = mysqli_real_escape_string($db, strip_tags($position));
 		$_SESSION['position'] = $position;
 	}
 	

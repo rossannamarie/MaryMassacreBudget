@@ -19,10 +19,10 @@ session_start();
 	}	
 	else if (!isset($_SESSION['username']))
 	{
-		$name = mysqli_real_escape_string(trim($_POST['username']));
-		$pw = mysqli_real_escape_string(trim($_POST['password']));
-		$name = mysqli_real_escape_string(strip_tags($_POST['username']));
-		$pw = mysqli_real_escape_string(strip_tags($_POST['password']));
+		$name = mysqli_real_escape_string($db, trim($_POST['username']));
+		$pw = mysqli_real_escape_string($db, trim($_POST['password']));
+		$name = mysqli_real_escape_string($db, strip_tags($_POST['username']));
+		$pw = mysqli_real_escape_string($db, strip_tags($_POST['password']));
 
 		$query = "select * from users WHERE name = '$name' AND password = '$pw'";
 		$result = mysqli_query($db, $query);
@@ -37,8 +37,8 @@ session_start();
 			echo "<h1>Login</h1>\n <form method=\"post\" action=\"postlogin.php\">";
 			echo "<label for=\"username\">Username : </label><input typ=\"text\" id=\"username\" name=\"username\" /><br/>";
 			echo "<label for=\"password\">Password : </label><input type=\"password\" id =\"password\" name=\"password\" /><br/>";
-			echo "<input type=\"submit\" value=\"Login\" name=\"submit\" /></form>;
-			//<p><a href=\"register.php\">Register</a></p>";
+			echo "<input type=\"submit\" value=\"Login\" name=\"submit\" /></form>";
+			echo "<p><a href=\"register.php\">Register</a></p>";
 		}
 	}
 	else if (isset($_SESSION['username']))
