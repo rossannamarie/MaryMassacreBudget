@@ -6,8 +6,8 @@
 </div>
 
 <p>
-<center><img src="teamPic.jpg">
+<center><font face = "Century Gothic" size="5"><a href="register.php">Register</a> | <a href="login.php">Login</a></font></center>
 <p>
-<font face = "Century Gothic" size="5"><a href="register.php">Register</a> | <a href="login.php">Login</a></font></center>
+<center><img src="teamPic.jpg"></center>
 
 </HTML>
