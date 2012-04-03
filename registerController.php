@@ -14,7 +14,6 @@ include "dbconnect.php";
 <div id="regView">
 <?php
 $name=$_GET['name'];
-echo "Values from GET ".$_GET['name'].$name." ";
 	if (isset($_GET['name'])){
 		$name=trim($_GET['name']); 
 		echo "NAME ". $name;
