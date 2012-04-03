@@ -9,20 +9,21 @@ USE budget;
 
 DROP TABLE IF EXISTS  `transactions`;
  CREATE TABLE  `transactions`  (
+     `id` INT NOT NULL AUTO_INCREMENT,
      `name`  VARCHAR(20) NOT NULL,
      `title`  VARCHAR(40) NOT NULL,
      `amount`  INT(5) NOT NULL,
      `flow`  VARCHAR(10) NOT NULL,
      `dateSubmitted`  DATE NOT NULL,
 	`because` VARCHAR(20) NOT NULL,
-    PRIMARY KEY (`name`)
+    PRIMARY KEY (`id`)
 );
 
 --
 -- Dumping data for table `transactions` 
 --
 
-INSERT INTO  `transactions`  VALUES('Example', 'Cupid\'s Revenge Bid', 300, 'Paid', '2012-02-15', 'Gas');
+INSERT INTO  `transactions`  VALUES(1, 'Example', 'Cupid\'s Revenge Bid', 300, 'Paid', '2012-02-15', 'Gas');
 
 --
 -- Table structure for table `users`  
@@ -43,7 +44,6 @@ CREATE TABLE `users` (
 
 INSERT INTO  `users`  VALUES('MaryBeth', 'MARYMASSACREBUDGET12', 'Captain', 'MaryBeth.jpg');
 INSERT INTO  `users`  VALUES('Devon', 'MARYMASSACREBUDGET12', 'Captain', 'Devon.jpg');
-INSERT INTO  `users`  VALUES('test', 'test', 'test', 'test.jpg');
 
 -- 
 -- Table structure for table `userLogs`
