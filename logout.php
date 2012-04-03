@@ -4,4 +4,4 @@
 	$_SESSION['username'] = "loggedout";
 ?>
 
-<META HTTP-EQUIV="refresh" content="0;URL=login.php">
+<META HTTP-EQUIV="refresh" content="0;URL=home.php">
